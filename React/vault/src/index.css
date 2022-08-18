@@ -1,0 +1,167 @@
+/* Mateo Herrera Lavalle */
+/* A01751912 */
+/* 15/08/2022 */
+
+/* CSS of my first react app*/
+
+body {
+    font: 14px "Century Gothic", Futura, sans-serif;
+    margin: 0px;
+    font-weight: bold;
+    padding: 0px;
+    overflow-y: hidden;
+  }
+  
+.page {
+  position: absolute;
+  left: 30px;
+  height: 100vh;
+  transition: left 1s ease-in-out;
+}
+
+.page.close {
+  left: -3000px;
+}
+
+.background {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: -30px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.board {
+  position: absolute;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  width: 400px;
+  height: 400px;
+  background-color: white;
+}
+
+#boardInstructions {
+  color: white;
+  position: absolute;
+  top: 160px;
+}
+
+.square {
+  border: 1px solid yellow;
+}
+
+#riddleBackground{
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  height: 100vh;
+  align-items: center;
+  color: white;
+}
+
+.riddlePart {
+  font-weight: bolder;
+  font-size: 30px;
+  justify-self: center;
+}
+
+.answerPart {
+  text-align: center;
+  align-self: start;
+  justify-self: center;
+}
+
+.sequencePart {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bolder;
+  align-self: center;
+  justify-self: center;
+}
+
+#inputRiddle {
+  font-size: 30px;
+  text-align: center;
+}
+
+#numberBackground{
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  height: 100vh;
+  align-items: center;
+  color: black;
+}
+
+#keypad {
+  height: 150px;
+  width: 400px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  background-color: black;
+}
+
+#keypad>button {
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+#congratulations {
+  font-size: 50px;
+  flex-direction: column;
+  left: 0px;
+}
+
+#lockButton {
+  font-size: 25px;
+  margin-top: 30px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+#peopleOpenArea {
+  text-align: center;
+  font-size: 20px;
+}
+
+#peopleOpenArea>div>form>button {
+  background-color: white;
+}
+
+#nameInArea {
+  text-align: center;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 20px;
+  display: flex;
+}
+
+#nameInArea>button {
+  background-color: white;
+}
+
+#people {
+  overflow-y: scroll;
+  height: 300px;
+}
+
+#frontPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 700px;
+  font-size: 40px;
+  text-align: center;
+}
+
+#startButton {
+  background: none;
+  border-radius: 20px;
+  font: 25px "Century Gothic", Futura, sans-serif;
+  font-weight: bold;
+  align-self: center;
+}
