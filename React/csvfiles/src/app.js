@@ -44,26 +44,32 @@ function App() {
     };
 
   return (
-    <div>
+    <div id="wrapper">
       {/* File Uploader */}
-      <input
-        type="file"
-        name="file"
-        accept=".csv"
-        onChange={changeHandler}
-        style={{ display: "block", margin: "10px auto" }}
-      />
-      <br />
-      <br />
-      {/* Table */}
-      <Table
-        tableRows={tableRows}
-        values={values}
-      />
-      <Table
-        tableRows={tableRows}
-        values={newValues}
-      />
+      <div id="inputDiv">
+        <input
+          type="file"
+          name="file"
+          accept=".csv"
+          onChange={changeHandler}
+          style={{ display: "block", margin: "10px auto" }}
+        />
+      </div>
+      {/* Tables */}
+      <div id="table1Div">
+        <p>Original Table</p>
+        <Table
+          tableRows={tableRows}
+          values={values}
+        />
+      </div>
+      <div id="table2Div">
+        <p>Transformed Table</p>
+        <Table
+          tableRows={tableRows}
+          values={newValues}
+        />
+      </div>
     </div>
   );
 }

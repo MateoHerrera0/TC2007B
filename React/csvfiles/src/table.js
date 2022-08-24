@@ -1,6 +1,6 @@
 export default function Table(props) {
     return(
-        <table>
+      <table>
         <thead>
           <tr>
             {props.tableRows.map((rows, index) => {
