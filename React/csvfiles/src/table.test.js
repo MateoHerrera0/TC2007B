@@ -1,3 +1,12 @@
+/*
+ * Test to check the correct render of the table component.
+ * 
+ * Mateo Herrera
+ * Gerardo Gutierrez
+ * Francisco segundo nombre
+ * 2022-08-24
+ */
+
 import { render, screen, cleanup } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Table from './table.js';

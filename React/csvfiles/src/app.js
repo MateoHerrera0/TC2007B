@@ -1,3 +1,11 @@
+/*
+ * App to display student data formatted for Mexico or USA read from a csv file
+ *
+ * Mateo Herrera
+ * Gerardo Gutierrez
+ * Francisco segundo nombre
+ * 2022-08-24
+ */
 
 import Papa from "papaparse";
 import { useState } from "react";
@@ -12,35 +20,38 @@ function App() {
     // State to store table values
     const [values, setValues] = useState([]);
 
-    // State to store table values
+    // State to store formatted table values
     const [newValues, setNewValues] = useState([]);
 
     const changeHandler = (event) => {
-        Papa.parse(event.target.files[0], {
-            header: true,
-            skipEmptyLines: true,
-            complete: function(results) {
-                const rowsArray = [];
-                const valuesArray = [];
-                const newValues = [];
-                results.data.map((d) => {
-                    rowsArray.push(Object.keys(d));
-                    valuesArray.push(Object.values(d));
-                    newValues.push(Format(Object.values(d)));
+      // Read the contents of a CSV file
+      Papa.parse(event.target.files[0], {
+        header: true,
+        skipEmptyLines: true,
+        complete: function(results) {
+          const rowsArray = [];
+          const valuesArray = [];
+          const newValues = [];
+          // Function to proccess the data and push it into the apprpriate 
+          // arrays
+          results.data.map((d) => {
+            rowsArray.push(Object.keys(d));
+            valuesArray.push(Object.values(d));
+            newValues.push(Format(Object.values(d)));
 
-                    return null;
-                });
+            return null;
+          });
 
-                // Filtered column names
-                setTableRows(rowsArray[0]);
+          // Column names
+          setTableRows(rowsArray[0]);
 
-                // Filtered values
-                setValues(valuesArray);
+          // Values
+          setValues(valuesArray);
 
-                // Filtered values
-                setNewValues(newValues);
-            },
-        });
+          // Formated values
+          setNewValues(newValues);
+          },
+      });
     };
 
   return (
