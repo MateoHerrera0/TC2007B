@@ -53,6 +53,7 @@ function App() {
           accept=".csv"
           onChange={changeHandler}
           style={{ display: "block", margin: "10px auto" }}
+          data-testid="inputForFile"
         />
       </div>
       {/* Tables */}
@@ -61,6 +62,7 @@ function App() {
         <Table
           tableRows={tableRows}
           values={values}
+          id='actualTable'
         />
       </div>
       <div id="table2Div">
@@ -68,6 +70,7 @@ function App() {
         <Table
           tableRows={tableRows}
           values={newValues}
+          id='resultTable'
         />
       </div>
     </div>
